@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Thanh Trung - Data Science Portfolio & CV</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-teal">
+
+    <!-- Thanh công cụ nổi Glassmorphism (Tự động ẩn khi xuất PDF) -->
+    <header class="toolbar">
+        <div class="toolbar-left">
+            <span class="toolbar-label"><i class="fa-solid fa-palette"></i> <span data-en="Theme:" data-vi="Bảng màu:">Bảng màu:</span></span>
+            <button class="color-dot dot-teal active" data-theme="theme-teal" title="Deep Teal (Mặc định)"></button>
+            <button class="color-dot dot-navy" data-theme="theme-navy" title="Executive Navy"></button>
+            <button class="color-dot dot-charcoal" data-theme="theme-charcoal" title="Modern Slate"></button>
+            <button class="color-dot dot-emerald" data-theme="theme-emerald" title="Emerald Forest"></button>
+            <button class="color-dot dot-indigo" data-theme="theme-indigo" title="AI Royal Indigo"></button>
+        </div>
+
+        <div class="toolbar-right">
+            <button id="darkModeBtn" class="btn-secondary" title="Chuyển đổi Sáng / Tối">
+                <i class="fa-solid fa-moon"></i> <span data-en="Dark" data-vi="Tối">Tối</span>
+            </button>
+            <button id="langToggleBtn" class="btn-secondary" title="Chuyển đổi ngôn ngữ tiêu đề">
+                <i class="fa-solid fa-language"></i> <span id="langText">EN</span>
+            </button>
+            <button id="printBtn" class="btn-primary">
+                <i class="fa-solid fa-file-pdf"></i> <span data-en="Export PDF (A4)" data-vi="Xuất PDF (A4)">Xuất PDF (A4)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Khung CV chuẩn A4 -->
+    <div class="cv-container">
+        
+        <!-- ================= CỘT TRÁI (SIDEBAR) ================= -->
+        <aside class="sidebar">
+            <!-- Ảnh đại diện & Tên -->
+            <div class="profile-section">
+                <div class="avatar-wrapper">
+                    <div class="avatar-box" id="avatarTrigger" title="Bấm để phóng to ảnh">
+                        <img src="download.png" alt="Nguyen Thanh Trung">
+                    </div>
+                </div>
+                <h1 class="profile-name">Nguyễn Thành Trung</h1>
+                <div class="role-wrapper">
+                    <span class="profile-role">Data Science Intern</span>
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span data-en="Open to Internship" data-vi="Sẵn sàng nhận việc">Open to Internship</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thông tin cá nhân (Có nút Copy tương tác) -->
+            <div class="sidebar-block">
+                <h2 class="sidebar-title">
+                    <i class="fa-regular fa-id-badge"></i>
+                    <span data-en="Contact Info" data-vi="Thông tin liên hệ">Contact Info</span>
+                </h2>
+                <ul class="contact-list">
+                    <li class="contact-item-interactive">
+                        <div class="contact-main">
+                            <i class="fa-solid fa-phone icon"></i>
+                            <a href="tel:0917604977">0917 604 977</a>
+                        </div>
+                        <button class="copy-btn" data-copy="0917604977" title="Copy số điện thoại">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                    <li class="contact-item-interactive">
+                        <div class="contact-main">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <a href="mailto:redwhite7769@gmail.com">redwhite7769@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" data-copy="redwhite7769@gmail.com" title="Copy Email">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                    <li class="contact-item-interactive">
+                        <div class="contact-main">
+                            <i class="fa-brands fa-github icon"></i>
+                            <a href="https://github.com/HenSenSanh" target="_blank" rel="noopener">github.com/HenSenSanh</a>
+                        </div>
+                        <a href="https://github.com/HenSenSanh" target="_blank" rel="noopener" class="copy-btn" title="Mở GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="contact-main">
+                            <i class="fa-regular fa-calendar icon"></i>
+                            <span data-en="13/12/2005 (Male)" data-vi="13/12/2005 (Nam)">13/12/2005 (Male)</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-main">
+                            <i class="fa-solid fa-location-dot icon"></i>
+                            <span data-en="District 12, Ho Chi Minh City, Vietnam" data-vi="Quận 12, TP. Hồ Chí Minh, Việt Nam">District 12, Ho Chi Minh City, Vietnam</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Học vấn -->
+            <div class="sidebar-block">
+                <h2 class="sidebar-title">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span data-en="Education" data-vi="Học vấn">Education</span>
+                </h2>
+                <div class="edu-card">
+                    <div class="edu-time">
+                        <i class="fa-regular fa-clock"></i> 2023 – 2027
+                    </div>
+                    <h3 class="edu-school">University of Transport Ho Chi Minh City (UTH)</h3>
+                    <p class="edu-major"><span data-en="Major:" data-vi="Chuyên ngành:">Major:</span> <strong>Data Science</strong></p>
+                </div>
+            </div>
+
+            <!-- Kỹ năng mềm -->
+            <div class="sidebar-block">
+                <h2 class="sidebar-title">
+                    <i class="fa-solid fa-brain"></i>
+                    <span data-en="Soft Skills" data-vi="Kỹ năng mềm">Soft Skills</span>
+                </h2>
+                <div class="soft-skills-list">
+                    <div class="soft-skill-card">
+                        <h4>Analytical & Data-Driven Thinking</h4>
+                        <p>Passionate about dissecting complex technical problems and exploring the foundational mathematics behind ML algorithms.</p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <h4>Resilience & Problem-Solving</h4>
+                        <p>Highly focused under pressure; adept at debugging complex models, optimizing training pipelines, and resolving unexpected system errors.</p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <h4>Rapid Adaptability</h4>
+                        <p>Proactive in researching and seamlessly integrating new frameworks, architectures, and libraries into practical, end-to-end projects.</p>
+                    </div>
+                    <div class="soft-skill-card">
+                        <h4>Strong Ownership</h4>
+                        <p>Committed to delivering high-quality, maintainable code with a deep sense of responsibility for project outcomes and model performance.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ================= CỘT PHẢI (MAIN CONTENT) ================= -->
+        <main class="main-content">
+            
+            <!-- Mục tiêu nghề nghiệp -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="header-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h2 class="section-title" data-en="Career Objective" data-vi="Mục tiêu nghề nghiệp">Career Objective</h2>
+                </div>
+                <p class="objective-text">
+                    Final-year <strong>Data Science</strong> student with a strong foundation in critical thinking and a proven ability to rapidly adopt emerging technologies. Demonstrated technical versatility through hands-on projects—ranging from engineering core machine learning algorithms from scratch to building end-to-end <strong>NLP</strong> and <strong>Computer Vision</strong> pipelines. Seeking a <strong>Data Science or Machine Learning Internship</strong> to leverage analytical problem-solving and programming expertise to drive impactful, data-driven solutions.
+                </p>
+            </section>
+
+            <!-- Kỹ năng kỹ thuật (Bấm vào để lọc dự án) -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="header-left-group">
+                        <div class="header-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h2 class="section-title" data-en="Technical Skills" data-vi="Kỹ năng chuyên môn">Technical Skills</h2>
+                    </div>
+                    <span class="interactive-hint" data-en="Click a skill to highlight projects" data-vi="Bấm vào kỹ năng để lọc dự án">
+                        <i class="fa-regular fa-hand-pointer"></i> Click a skill to highlight projects
+                    </span>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <span class="category-name" data-en="Programming & Tools:" data-vi="Ngôn ngữ & Công cụ:">Programming & Tools:</span>
+                        <div class="badge-group">
+                            <button class="tech-badge highlight" data-skill="python">Python</button>
+                            <button class="tech-badge" data-skill="git">Git / GitHub</button>
+                            <button class="tech-badge" data-skill="linux">Linux</button>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="category-name" data-en="Libraries & Frameworks:" data-vi="Thư viện & Frameworks:">Libraries & Frameworks:</span>
+                        <div class="badge-group">
+                            <button class="tech-badge highlight" data-skill="pytorch">PyTorch</button>
+                            <button class="tech-badge highlight" data-skill="huggingface">Hugging Face Transformers</button>
+                            <button class="tech-badge highlight" data-skill="opencv">OpenCV</button>
+                            <button class="tech-badge" data-skill="numpy">NumPy</button>
+                            <button class="tech-badge" data-skill="pandas">Pandas</button>
+                            <button class="tech-badge" data-skill="matplotlib">Matplotlib</button>
+                            <button class="tech-badge" data-skill="seaborn">Seaborn</button>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <span class="category-name" data-en="Core Competencies:" data-vi="Năng lực cốt lõi:">Core Competencies:</span>
+                        <div class="badge-group">
+                            <button class="tech-badge" data-skill="ml">Machine Learning (From Scratch & Fine-tuning)</button>
+                            <button class="tech-badge" data-skill="nlp">Natural Language Processing (NLP)</button>
+                            <button class="tech-badge" data-skill="cv">Computer Vision (Object Detection, OCR)</button>
+                            <button class="tech-badge" data-skill="da">Data Analysis</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dự án cá nhân (Personal Projects) -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="header-left-group">
+                        <div class="header-icon"><i class="fa-solid fa-code-branch"></i></div>
+                        <h2 class="section-title" data-en="Personal Projects" data-vi="Dự án tiêu biểu">Personal Projects</h2>
+                    </div>
+                    <button id="resetFilterBtn" class="reset-filter-btn hidden">
+                        <i class="fa-solid fa-rotate-left"></i> <span data-en="Show All" data-vi="Hiện tất cả">Show All</span>
+                    </button>
+                </div>
+
+                <div class="timeline">
+                    
+                    <!-- Project 1: ALPR -->
+                    <article class="project-card" data-tags="python,opencv,cv,ml,git,linux,numpy">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">License Plate Recognition (ALPR) System</h3>
+                                <div class="project-subtitle">
+                                    <span data-en="Collaborative & Academic Project" data-vi="Dự án Hợp tác & Học thuật">Collaborative & Academic Project</span>
+                                    <span class="separator">•</span>
+                                    <a href="https://github.com/NHTung-0801/license_plate_recognition" target="_blank" rel="noopener" class="project-link">
+                                        <i class="fa-brands fa-github"></i> NHTung-0801/license_plate_recognition
+                                        <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="time-badge">2025 – Present</span>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-step">
+                                <span class="step-label" data-en="Problem:" data-vi="Bài toán:">Problem:</span>
+                                <p>Extracting characters from license plates in unconstrained environments is challenging due to illumination variances and complex layouts (e.g., 1-line vs. 2-line Vietnamese plates), which severely degrade the segmentation and accuracy of generic OCR models.</p>
+                            </div>
+                            <div class="project-step">
+                                <span class="step-label" data-en="Solution & Pipeline:" data-vi="Giải pháp & Pipeline:">Solution & Pipeline:</span>
+                                <ul>
+                                    <li>Engineered a 5-stage traditional Computer Vision and Machine Learning pipeline. Deployed <strong>YOLOv8</strong> for precise plate localization and ROI cropping.</li>
+                                    <li>Built a robust <strong>OpenCV</strong> preprocessing module (angle correction, CLAHE, adaptive thresholding, morphology) and applied <strong>Connected Components</strong> to dynamically segment and sort characters by layout.</li>
+                                    <li>Extracted <strong>HOG (Histogram of Oriented Gradients)</strong> features to train a <strong>Support Vector Machine (SVM)</strong> classifier instead of heavy deep learning OCR, paired with rule-based post-processing to decode and validate Vietnamese province codes.</li>
+                                </ul>
+                            </div>
+                            <div class="project-step">
+                                <span class="step-label" data-en="Result:" data-vi="Kết quả:">Result:</span>
+                                <p>Delivered a highly interpretable, end-to-end ALPR system. The <strong>HOG + SVM</strong> architecture combined with strict syntax validation achieved reliable accuracy on Vietnamese plates, while systematic confidence and raw string logging enabled continuous error analysis and model refinement.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-footer-tags">
+                            <span class="mini-tag">Python</span>
+                            <span class="mini-tag">YOLOv8</span>
+                            <span class="mini-tag">OpenCV</span>
+                            <span class="mini-tag">HOG + SVM</span>
+                            <span class="mini-tag">Connected Components</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: News Topic Classification -->
+                    <article class="project-card" data-tags="python,pytorch,huggingface,nlp,ml,da,pandas,numpy,matplotlib,seaborn,git,linux">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">News Topic Classification</h3>
+                                <div class="project-subtitle">
+                                    <span data-en="End-to-End Project Developer" data-vi="Phát triển Dự án End-to-End">End-to-End Project Developer</span>
+                                    <span class="separator">•</span>
+                                    <a href="https://github.com/HenSenSanh/Topic-detection" target="_blank" rel="noopener" class="project-link">
+                                        <i class="fa-brands fa-github"></i> HenSenSanh/Topic-detection
+                                        <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="time-badge">2025</span>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-step">
+                                <span class="step-label" data-en="Problem:" data-vi="Bài toán:">Problem:</span>
+                                <p>Accurately categorizing large volumes of raw textual data requires an optimized approach that carefully balances high model accuracy with computational resource efficiency.</p>
+                            </div>
+                            <div class="project-step">
+                                <span class="step-label" data-en="Solution:" data-vi="Giải pháp:">Solution:</span>
+                                <ul>
+                                    <li>Built an automated text classification pipeline utilizing <strong>Python, PyTorch, and Hugging Face Transformers</strong>.</li>
+                                    <li>Standardized a lightweight LLM architecture using <strong>DistilBERT</strong>. Conducted extensive experiments comparing <em>Full Fine-tuning</em> and <em>Frozen Encoder</em> strategies, applying hyperparameter tuning to control overfitting.</li>
+                                </ul>
+                            </div>
+                            <div class="project-step">
+                                <span class="step-label" data-en="Result:" data-vi="Kết quả:">Result:</span>
+                                <p>Successfully evaluated the model on the <strong>AG News</strong> benchmark dataset. Analyzed key metrics (<strong>Loss, Accuracy, F1-score</strong>) across training epochs to establish the optimal trade-off between performance and training efficiency.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-footer-tags">
+                            <span class="mini-tag">Python</span>
+                            <span class="mini-tag">PyTorch</span>
+                            <span class="mini-tag">Hugging Face</span>
+                            <span class="mini-tag">DistilBERT</span>
+                            <span class="mini-tag">AG News Benchmark</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modal Phóng to Ảnh đại diện (Ẩn khi in) -->
+    <div id="avatarModal" class="avatar-modal">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-modal">&times;</button>
+            <img src="download.png" alt="Nguyễn Thành Trung - Portrait">
+            <p class="modal-caption">Nguyễn Thành Trung — Data Science Intern</p>
+        </div>
+    </div>
+
+    <!-- Toast Notification (Thông báo sao chép / lọc kỹ năng) -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
